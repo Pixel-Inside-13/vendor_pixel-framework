@@ -93,6 +93,12 @@
             settings:controller="com.android.settings.gestures.TapScreenGesturePreferenceController"
             settings:searchable="false" />
 
+        <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:key="enable_ripple_effect"
+            android:title="@string/enable_fingerprint_ripple_effect_title"
+            android:summary="@string/enable_fingerprint_ripple_effect_summary"
+            android:defaultValue="true" />
+
         <Preference
             android:fragment="com.android.settings.gestures.DoubleTapScreenSettings"
             android:key="ambient_display_double_tap"
