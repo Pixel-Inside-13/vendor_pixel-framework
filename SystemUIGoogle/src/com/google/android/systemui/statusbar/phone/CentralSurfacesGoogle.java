@@ -110,6 +110,7 @@ import com.android.systemui.statusbar.policy.ConfigurationController;
 import com.android.systemui.statusbar.policy.DeviceProvisionedController;
 import com.android.systemui.statusbar.policy.ExtensionController;
 import com.android.systemui.statusbar.policy.KeyguardStateController;
+import com.android.systemui.statusbar.policy.BurnInProtectionController;
 import com.android.systemui.statusbar.policy.UserInfoControllerImpl;
 import com.android.systemui.statusbar.policy.UserSwitcherController;
 import com.android.systemui.statusbar.window.StatusBarWindowController;
@@ -244,6 +245,7 @@ public class CentralSurfacesGoogle extends CentralSurfacesImpl {
             WiredChargingRippleController wiredChargingRippleController,
             IDreamManager dreamManager,
             SysUiState sysUiState,
+            BurnInProtectionController burnInProtectionController,
             WallpaperNotifier wallpaperNotifier,
             Optional<ReverseChargingViewController> reverseChargingViewControllerOptional,
             KeyguardIndicationControllerGoogle keyguardIndicationControllerGoogle,
@@ -278,7 +280,7 @@ public class CentralSurfacesGoogle extends CentralSurfacesImpl {
                 featureFlags, keyguardUnlockAnimationController, delayableExecutor,
                 messageRouter, wallpaperManager, startingSurfaceOptional, activityLaunchAnimator,
                 notifPipelineFlags, jankMonitor, deviceStateManager, dreamOverlayStateController,
-                wiredChargingRippleController, dreamManager, tunerService, refreshNavbarHandler, sysUiState);
+                wiredChargingRippleController, dreamManager, tunerService, refreshNavbarHandler, sysUiState, burnInProtectionController);
         mBatteryStateChangeCallback = new BatteryController.BatteryStateChangeCallback() {
             @Override
             public void onBatteryLevelChanged(int i, boolean z, boolean z2) {
